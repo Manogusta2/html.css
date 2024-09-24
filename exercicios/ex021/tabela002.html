@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -26,9 +27,20 @@
             background-color: lightgrey;
         }
 
+        tbody > tr:nth-child(2n) {
+            background-color: darkgrey;
+        }
+
+
         thead, tfoot {
-            background-color: gray;
+            background-color: rgba(12, 12, 12, 0.76);
             color: white;
+        }
+
+        thead > tr > th { /*exelente para tabelas com muitas linhas */
+            position: sticky;
+            top: -1px;
+            background-color: rgba(12, 12, 12, 0.76);;
         }
 
         td.num {
